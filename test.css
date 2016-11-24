@@ -1,0 +1,71 @@
+/**
+* @Author: Julien SOBRITZ
+* @Date:   2016-11-23T19:05:14+01:00
+* @Email:  julien.s@codeur.online
+* @Filename: test.css
+* @Last modified by:   Julien SOBRITZ
+* @Last modified time: 2016-11-24T09:39:56+01:00
+*/
+
+
+
+body
+{
+	background-color : #CBEBF5;
+}
+
+p {
+  margin-top: 25px;
+}
+
+span {
+  margin-top: 25px;
+}
+
+.policecaractere /*changement de la police de caractere*/
+{
+  margin-top: 50px;
+  padding-top: 50px;
+  font-family : castellar;
+	color : #292929;
+	text-align : center;
+	font-size: 25px;
+	font-weight : bold;
+}
+
+#redimensiondiv /* dimension de la div du formulaire*/
+{
+	width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25px;
+	border: 1px;
+	border-radius : 20px;
+	border-color: black;
+	background-color: white;
+}
+
+form /*mise en forme du formulaire*/
+{
+	text-align: center;
+	font-size: 15px;
+	font-family : castellar;
+	font-weight : bold;
+	color : #292929;
+}
+
+#bouton /* mise en forme du bouton*/
+{
+	width:150px;
+	height:30px;
+	color : #292929;
+	font-weight : bold;
+	font-size: 20px;
+	border-radius : 20px;
+  margin-top: 50px;
+}
+
+#message {
+	min-width: 200px;
+	min-height: 150px;
+}

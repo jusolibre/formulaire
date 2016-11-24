@@ -1,0 +1,40 @@
+<!--
+@Author: Julien SOBRITZ
+@Date:   2016-11-23T15:01:19+01:00
+@Email:  julien.s@codeur.online
+@Filename: test.html
+@Last modified by:   Julien SOBRITZ
+@Last modified time: 2016-11-23T20:59:26+01:00
+-->
+
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="test.css">
+    <script type="text/javascript" src="test.js"></script>
+    <title>Formulaire</title>
+	</head>
+
+	<body>
+	<div id="redimensiondiv">
+
+  <form>
+		  <p class="policecaractere">Formulaire de contact</p>
+      <span id="errorHandler"></span>
+			<p><label for="nom">Nom:</label> <input type="textbox" name="nom" id="nom" value=""></p>
+      <span id="nomError"></span>
+			<p><label for="email">Email:</label> <input type="email" name="email" id="email" value=""></p>
+      <span id="emailError"></span>
+			<p><label for="objet">Objet:</label> <input type="textbox" name="objet" id="objet" value=""></p>
+      <span id="objetError"></span>
+			<p><label for="message">Message:</label> <textarea name="message" id="message"></textarea></p>
+      <span id="messageError"></span>
+			<p><input id="bouton" type="button" value="Envoyer" onclick="checkAll()"></p>
+		</form>
+	</div>
+	</body>
+</html>
