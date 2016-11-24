@@ -1,36 +1,61 @@
 /**
 * @Author: Julien SOBRITZ
-* @Date:   2016-11-23T19:05:14+01:00
+* @Date:   2016-11-24T12:54:40+01:00
 * @Email:  julien.s@codeur.online
-* @Filename: test.css
+* @Filename: index.css
 * @Last modified by:   Julien SOBRITZ
-* @Last modified time: 2016-11-24T12:48:25+01:00
+* @Last modified time: 2016-11-24T15:02:11+01:00
 */
 
 
 
+@font-face {
+  font-family: 'FontTitle';
+  src: url('celticmd.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontText';
+  src: url('DJB Chalk It Up.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
 	background-color: #353432;
+  font-family: 'FontText';
 }
 
 p {
-	color: #353432;
+	color: #FFFFFF;
   margin-top: 25px;
+  font-family: 'FontText';
 }
 
 span {
+  color: #BF1617;
+  font-size: 18px;
+  font-family: arial;
   margin-top: 25px;
+  margin-left: 20px;
 }
 
 input {
+  font-size: 22px;
+  padding-left: 10px;
 	text-align: left;
-	background-color: #FFFFFF;
+  width: 300px;
+	background-color: #C2CDE5;
 	border-radius: 5px;
   border: 1px solid #abadb3;
 }
 
 textarea {
-	background-color: #FFFFFF;
+  font-size: 22px;
+  padding-left: 10px;
+	background-color: #C2CDE5;
 	border-radius: 5px;
 	border: 1px solid #abadb3;
 }
@@ -42,14 +67,16 @@ form /*mise en forme du formulaire*/
 	margin-top: -25px;
 	text-align: center;
 	font-size: 15px;
-	font-family : castellar;
+	font-family : 'FontText';
+  font-size: 25px;
 	font-weight : bold;
 	color : #292929;
 }
 
 label {
-	color: #353432;
-	padding-left: auto;
+	color: #FFFFFF;
+  padding-left: 25%;
+  text-align: left;
 	padding-right: 10px;
 }
 
@@ -69,7 +96,7 @@ div {
   padding-top: 25px;
   padding-bottom: 25px;
 	margin-bottom: 0px;
-  font-family : castellar;
+  font-family : FontTitle;
 	color : #FFFFFF;
 	text-align : center;
 	font-size: 25px;
@@ -83,34 +110,44 @@ div {
 	background-color: #363940;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-family : castellar;
+  font-family : FontTitle;
+  font-size: 50px;
 	color : #FFFFFF;
 	text-align : center;
-	font-size: 25px;
 	font-weight : bold;
 	border-radius: 5px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
 
+.input {
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: -3px;
+  align-self: flex-start;
+  padding-left: 25%;
+}
+
 #redimensiondiv /* dimension de la div du formulaire*/
 {
 	width: 1200px;
 	border: 1px;
-	border-color: black;
-	background-color: #C2CDE5;
-	border: 15px solid #a8c50f;
+	background-color: #828DA5;
+	border: 15px solid #26C7E5;
 	border-radius: 20px;
 }
 
 #bouton /* mise en forme du bouton*/
 {
-	align-content: center;
+	text-align: center;
+  vertical-align: middle;
+  padding-bottom: 5px;
 	border: 2px solid #FFFFFF;
 	background-color: #C2CDE5;
 	width:150px;
-	height:30px;
+	height:40px;
 	color : #292929;
+  font-family: FontText;
 	font-weight : bold;
 	font-size: 20px;
 	border-radius : 10px;
@@ -119,13 +156,37 @@ div {
 }
 
 #italique {
-	color: #292929;
-	margin-left: -100px;
+	color: #FFFFFF;
+  font-family: FontText;
+  margin-top: 0px;
+	margin-left: -375px;
 	font-size: 0.6em;
-	font-family: sans-serif;
 }
 
 #message {
 	min-width: 750px;
 	min-height: 150px;
+  max-width: 750px;
+  max-height: 150px;
+}
+
+#black {
+  margin: 0px;
+  padding: 2px;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  background-color: #69EAFF;
+}
+
+#black2 {
+  margin: 0px;
+  padding: 2px;
+  margin-top: 30px;
+  margin-bottom: -50px;
+  background-color: #69EAFF;
+}
+
+#errorHandler {
+  margin-left: 0px;
+  margin-bottom: 50px;
 }

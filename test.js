@@ -4,32 +4,37 @@
 * @Email:  julien.s@codeur.online
 * @Filename: test.js
 * @Last modified by:   Julien SOBRITZ
-* @Last modified time: 2016-11-24T09:24:37+01:00
+* @Last modified time: 2016-11-24T15:48:01+01:00
 */
 
 function unmatchingPaternError(name) {
   var errorHandler = document.getElementById(name + "Error");
 
-  errorHandler.innerHTML = name + " is not matching a correct pattern.";
+  errorHandler.innerHTML = " " + " ne correspond pas a une adresse mail !";
 }
 
 function tooShortError(name) {
   var errorHandler = document.getElementById(name + "Error");
 
-  errorHandler.innerHTML = name + " is too short.";
+  errorHandler.innerHTML = " " + " trop court !";
 }
 
 function tooLongError(name) {
   var errorHandler = document.getElementById(name + "Error");
 
-  errorHandler.innerHTML = name + " is too long.";
+  errorHandler.innerHTML = " " + " trop long !";
 }
 
 function redColoring(name) {
   var coloringContent = document.getElementById(name);
   var errorHandler = document.getElementById("errorHandler");
 
-  errorHandler.innerHTML += "<br/>" + name + " isn't correct.";
+  if (countError == 0)
+    errorHandler.innerHTML = "Veuillez saisir correctement le(s) champ(s) non valide :<br/>" + name;
+  else {
+    errorHandler.innerHTML += ", " + name;
+  }
+  countError +=1;
   coloringContent.style.border = "2px solid #FF0000";
 }
 
@@ -43,30 +48,38 @@ function check(array) {
   if (array.value.length < 2) {
     tooShortError(array.name);
     redColoring(array.name);
+    return (false);
   }
   else if (array.name == "message" && array.value.length > 1024) {
     tooLongError(array.name);
     redColoring(array.name);
+    return (false);
   }
   else if (array.name != "message" && array.value.length > 255) {
     tooLongError(array.name);
     redColoring(array.name);
+    return (false);
   }
   else {
     greenColoring(array.name);
+    return (true);
   }
 }
 
-function checkMail(name) {
+function checkMail(name, valeur) {
   var patt = new RegExp("^[A-Za-z0-9._-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,6}$");
   var result;
 
+  valeur++;
   result = patt.test(name.value);
-  if (result == true)
+  if (result == true) {
     greenColoring(name.name);
+    return (true);
+  }
   else {
     unmatchingPaternError(name.name);
     redColoring(name.name);
+    return (false);
   }
 }
 
@@ -82,6 +95,8 @@ function clearError() {
   message.innerHTML = "";
 }
 
+var countError = 0;
+
 function checkAll() {
   var nom = document.getElementById("nom");
   var email = document.getElementById("email");
@@ -90,9 +105,16 @@ function checkAll() {
   var errorHandler = document.getElementById("errorHandler");
 
   errorHandler.innerHTML = "";
+  countError = 0;
   clearError();
-  check(nom);
-  checkMail(email);
-  check(objet);
-  check(message);
+  else if (check(nom) == false)
+    return (false);
+  else if (checkMail(email) == false)
+    return (false);
+  else if (check(objet) == false)
+    return (false);
+  else if (check(message) == false)
+    return (false);
+  else
+    return (true);
 }

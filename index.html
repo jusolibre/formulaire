@@ -1,0 +1,43 @@
+<!--
+@Author: Julien SOBRITZ
+@Date:   2016-11-23T15:01:19+01:00
+@Email:  julien.s@codeur.online
+@Filename: test.html
+@Last modified by:   Julien SOBRITZ
+@Last modified time: 2016-11-24T15:50:20+01:00
+-->
+
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="test.js"></script>
+    <title>Formulaire</title>
+	</head>
+
+	<body>
+	<div id="redimensiondiv">
+
+  <form action="page.php" onsubmit="return checkAll()">
+		  <p class="policecaractere">Formulaire de contact</p>
+			<p id="black"></p>
+      <span id="errorHandler"></span>
+			<label for="nom">Nom: *</label>
+			<p class="input"><input type="textbox" name="nom" id="nom" value="" placeholder="Jérémy"><span id="nomError"></span></p>
+			<label for="email">Email: *</label>
+			<p class="input"><input type="email" name="email" id="email" value="" placeholder="mail@boite.domaine"><span id="emailError"></span></p>
+			<label for="objet">Objet: *</label>
+			<p class="input"><input type="textbox" name="objet" id="objet" value="" placeholder="string"><span id="objetError"></span></p>
+			<label for="message">Message: *<span id="messageError"></span></label>
+			<p class="input"><textarea name="message" id="message" placeholder="Un message..."></textarea></p>
+			<p id="italique">Tous les champs * sont obligatoires</p>
+			<p id="black2"></p>
+			<p class="policecaractere2"><input id="bouton" type="submit" value="Envoyer"></p>
+		</form>
+	</div>
+	</body>
+</html>
