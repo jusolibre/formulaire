@@ -4,7 +4,7 @@
 * @Email:  julien.s@codeur.online
 * @Filename: index.css
 * @Last modified by:   Julien SOBRITZ
-* @Last modified time: 2016-11-24T15:02:11+01:00
+* @Last modified time: 2016-11-24T16:27:58+01:00
 */
 
 
@@ -83,10 +83,6 @@ label {
 div {
 	margin-right: auto;
 	margin-left: auto;
-}
-
-.nom {
-	padding-left: -10px;
 }
 
 .policecaractere2 /*changement de la police de caractere*/
@@ -189,4 +185,12 @@ div {
 #errorHandler {
   margin-left: 0px;
   margin-bottom: 50px;
+}
+
+input:-moz-placeholder {
+    color: #FFFFFF;
+}
+
+textarea:-moz-placeholder {
+    color: #FFFFFF;
 }

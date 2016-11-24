@@ -4,7 +4,7 @@
 @Email:  julien.s@codeur.online
 @Filename: test.html
 @Last modified by:   Julien SOBRITZ
-@Last modified time: 2016-11-24T15:50:20+01:00
+@Last modified time: 2016-11-24T16:57:38+01:00
 -->
 
 
@@ -20,24 +20,28 @@
 	</head>
 
 	<body>
-	<div id="redimensiondiv">
-
-  <form action="page.php" onsubmit="return checkAll()">
-		  <p class="policecaractere">Formulaire de contact</p>
-			<p id="black"></p>
-      <span id="errorHandler"></span>
-			<label for="nom">Nom: *</label>
-			<p class="input"><input type="textbox" name="nom" id="nom" value="" placeholder="Jérémy"><span id="nomError"></span></p>
-			<label for="email">Email: *</label>
-			<p class="input"><input type="email" name="email" id="email" value="" placeholder="mail@boite.domaine"><span id="emailError"></span></p>
-			<label for="objet">Objet: *</label>
-			<p class="input"><input type="textbox" name="objet" id="objet" value="" placeholder="string"><span id="objetError"></span></p>
-			<label for="message">Message: *<span id="messageError"></span></label>
-			<p class="input"><textarea name="message" id="message" placeholder="Un message..."></textarea></p>
-			<p id="italique">Tous les champs * sont obligatoires</p>
-			<p id="black2"></p>
-			<p class="policecaractere2"><input id="bouton" type="submit" value="Envoyer"></p>
-		</form>
-	</div>
+		<div id="redimensiondiv">
+  		<form method="post" action="page.php" onsubmit="return checkAll()">
+		  	<p class="policecaractere">Formulaire de contact</p>
+				<!-- balise black et black2 qui servent a inclure la ligne simple en haut du pied de page et en bas du header de notre formulaire-->
+				<p id="black"></p>
+				<!-- creation d'un span contenant la zone ou sera afficher le message d'erreur général de la page -->
+      	<span id="errorHandler"></span>
+				<!-- creation d'un label lié a l'input qui suit -->
+				<label for="nom">Nom: *</label>
+				<!-- creation d'un paragraphe contenant l'input et gestion de style grace a la balise p -->
+				<!-- creation d'un span contenant la zone ou sera afficher le message d'erreur lié au champ -->
+				<p class="input"><input type="textbox" name="nom" id="nom" value="" placeholder="pseudo (2-255 caracteres)"><span id="nomError"></span></p>
+				<label for="email">Email: *</label>
+				<p class="input"><input type="email" name="email" id="email" value="" placeholder="pseudo@boite.com"><span id="emailError"></span></p>
+				<label for="objet">Objet: *</label>
+				<p class="input"><input type="textbox" name="objet" id="objet" value="" placeholder="object (2-255 caracteres)"><span id="objetError"></span></p>
+				<label for="message">Message: *<span id="messageError"></span></label>
+				<p class="input"><textarea name="message" id="message" placeholder="Message de maximum 1024 caracteres"></textarea></p>
+				<p id="italique">Tous les champs * sont obligatoires</p>
+				<p id="black2"></p>
+				<p class="policecaractere2"><input id="bouton" type="submit" value="Envoyer"/></p>
+			</form>
+		</div>
 	</body>
 </html>
